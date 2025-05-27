@@ -39,6 +39,7 @@ public class Sandwich extends Product implements Customizable {
 
     @Override
     public double getPrice() {
+        double basePrice = 0;
         double totalToppings = 0;
         for (Topping t : toppings) {
             totalToppings += t.getPrice();
