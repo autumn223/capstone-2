@@ -1,6 +1,6 @@
 package com.delicious.models;
 
-public class IncludedTopping extends Topping {
+public class IncludedTopping{
     public IncludedTopping(String name, double price, boolean isExtra) {
         super(name, 0, false);
     }

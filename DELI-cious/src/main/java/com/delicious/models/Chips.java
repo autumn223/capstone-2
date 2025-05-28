@@ -1,11 +1,14 @@
 package com.delicious.models;
 
-public class Chips extends Product{
+public class Chips {
 
     private String type;
 
-    public Chips(String name, double price, String type) {
-        super(name, price);
+    public Chips(String type) {
         this.type = type;
     }
+
+    public double getPrice(){
+       return 1.50;
+   }
 }

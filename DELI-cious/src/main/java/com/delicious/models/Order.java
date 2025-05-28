@@ -15,40 +15,35 @@ public class Order {
         chips = new ArrayList<>();
     }
 
-    public void addSandwich(Sandwich s) {
-        sandwiches.add(0, s);  // newest first
+    public void addSandwich(Sandwich sandwich) {
+        sandwiches.add(0, sandwich);
     }
 
-    public void addDrink(Drink d) {
-        drinks.add(0, d);
+    public void addDrink(Drink drink) {
+        drinks.add(0, drink);
     }
 
-    public void addChips(Chips c) {
-        chips.add(0, c);
+    public void addChips(Chips chip) {
+        chips.add(0, chip);
     }
 
-    public double getTotalPrice() {
-        double totalSandwich = sandwiches.stream().mapToDouble(Sandwich::getPrice).sum();
-        double totalDrink = drinks.stream().mapToDouble(Drink::getPrice).sum();
-        double totalChips = chips.stream().mapToDouble(Chips::getPrice).sum();
-        return totalSandwich + totalDrink + totalChips;
-    }
+    public double getTotalCost() {
+        double subtotal = 0.0;
 
-    public String getOrderDetails() {
-        StringBuilder sb = new StringBuilder("Order Details:\n\nSandwiches:\n");
-        for (Sandwich s : sandwiches) {
-            sb.append(s.getDescription()).append("\n\n");
+        for (Sandwich sandwich : sandwiches) {
+            subtotal += sandwich.getPrice();
         }
-        sb.append("Drinks:\n");
-        for (Drink d : drinks) {
-            sb.append(" - ").append(d.getDescription()).append("\n");
+
+        for (Drink drink : drinks) {
+            subtotal += drink.getPrice();
         }
-        sb.append("Chips:\n");
-        for (Chips c : chips) {
-            sb.append(" - ").append(c.getDescription()).append("\n");
+
+        for (Chips chip : chips) {
+            subtotal += chip.getPrice();
         }
-        sb.append(String.format("\nTotal Price: $%.2f", getTotalPrice()));
-        return sb.toString();
+
+        return subtotal;
     }
+
 }
 
