@@ -16,7 +16,7 @@ public class Order {
     }
 
     public void addSandwich(Sandwich s) {
-        sandwiches.add(0, s);  // newest first
+        sandwiches.add(0, s);
     }
 
     public void addDrink(Drink d) {
