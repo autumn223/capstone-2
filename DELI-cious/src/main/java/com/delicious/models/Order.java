@@ -17,7 +17,10 @@ public class Order {
 
     public void addSandwich(Sandwich sandwich) {
         sandwiches.add(0, sandwich);
+    }
 
+    public List<Sandwich> getSandwiches() {
+        return sandwiches;
     }
 
     public void addDrink(Drink drink) {
@@ -45,6 +48,5 @@ public class Order {
 
         return subtotal;
     }
-
 }
 
