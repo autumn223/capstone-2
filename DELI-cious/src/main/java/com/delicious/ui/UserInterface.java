@@ -78,7 +78,7 @@ public class UserInterface {
             System.out.print("Topping: ");
             String input = scanner.nextLine();
             if (input.equalsIgnoreCase("done")) break;
-            sandwich.addRegularTopping(new Regular(input, false));
+            sandwich.addRegularTopping(new RegularTopping(input, false));
         }
 
         // Add sauces
