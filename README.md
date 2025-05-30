@@ -100,7 +100,7 @@ Program (Class)
 
 main(String[] args): void
 
-
+Screenshots of Application
 
 ![DA1](https://github.com/user-attachments/assets/a71c194d-80ff-4fef-bfb5-fb94382ac86d)
 ![DA2](https://github.com/user-attachments/assets/d4582ba2-d3c4-4581-a1c2-c00063586685)
@@ -129,6 +129,76 @@ main(String[] args): void
 ![DA25](https://github.com/user-attachments/assets/9f681bd0-7846-42f5-9e3d-4c2d7ec8ec92)
 ![DA26](https://github.com/user-attachments/assets/dab954aa-cd62-4c16-aef8-e0241b4b614c)
 ![DA27](https://github.com/user-attachments/assets/528eb0aa-7583-4731-b6b8-87ef36ef85c6)
+
+
+Interesting Code Example: Interactive Sandwich Builder
+The method buildSandwich() in UserInterface guides the user through selecting sandwich options step-by-step. It uses loops and switch statements to let the user add multiple meats, cheeses, and toppings, each with options for extras. The code also includes default values and input validation.
+
+
+private Sandwich buildSandwich() {
+    System.out.println("Pricing Per Size:");
+    System.out.println("4-inch ----------------- $5.50");
+    System.out.println("8-inch ----------------- $7.00");
+    System.out.println("12-inch ---------------- $8.50");
+    System.out.println("Choose a size:\n1) 4-inch\n2) 8-inch\n3) 12-inch");
+    int sizeChoice = Integer.parseInt(scanner.nextLine());
+    int size = 0;
+    switch (sizeChoice) {
+        case 1: size = 4; break;
+        case 2: size = 8; break;
+        case 3: size = 12; break;
+        default:
+            System.out.println("Invalid choice, defaulting to 4-inch.");
+            size = 4;
+    }
+
+    System.out.println("\nChoose bread type:");
+    System.out.println("1) White\n2) Wheat\n3) Rye\n4) Sourdough\n5) Wrap");
+    System.out.print("Choice: ");
+    String bread = "";
+    switch (scanner.nextLine()) {
+        case "1": bread = "White"; break;
+        case "2": bread = "Wheat"; break;
+        case "3": bread = "Rye"; break;
+        case "4": bread = "Sourdough"; break;
+        case "5": bread = "Wrap"; break;
+        default:
+            System.out.println("Invalid choice, defaulting to White.");
+            bread = "White";
+    }
+
+    System.out.println("Toasted? (yes/no):");
+    boolean toasted = scanner.nextLine().equalsIgnoreCase("yes");
+
+    Sandwich sandwich = new Sandwich(size, bread, toasted);
+
+    // Adding meats with option for extra portions
+    System.out.println("Add meats (type 'done' to finish):");
+    while (true) {
+        System.out.println("1) Steak\n2) Ham\n3) Salami\n4) Roast Beef\n5) Chicken\n6) Bacon");
+        String input = scanner.nextLine();
+        if (input.equalsIgnoreCase("done")) break;
+
+        String meat = null;
+        switch (input) {
+            case "1": meat = "Steak"; break;
+            case "2": meat = "Ham"; break;
+            case "3": meat = "Salami"; break;
+            case "4": meat = "Roast Beef"; break;
+            case "5": meat = "Chicken"; break;
+            case "6": meat = "Bacon"; break;
+            default: System.out.println("Invalid meat choice."); continue;
+        }
+
+        System.out.print("Extra? (yes/no): ");
+        boolean extra = scanner.nextLine().equalsIgnoreCase("yes");
+        sandwich.addMeat(new Meat(meat, extra));
+    }
+
+    // Similar loops exist for cheeses, regular toppings, and sauces...
+
+    return sandwich;
+}
 
 
 
