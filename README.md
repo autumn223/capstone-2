@@ -1,5 +1,8 @@
 DELI-cious Point-of-Sale Application
-Overview:
+
+
+Overview
+
 DELI-cious is a simple Java console-based point-of-sale (POS) system for a sandwich deli. It allows users to create custom sandwich orders, add drinks and chips, view order summaries, and save detailed receipts as text files.
 
 Features
