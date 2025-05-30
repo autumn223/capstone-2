@@ -22,3 +22,81 @@ Receipt Generation
 
 Automatically generates a timestamped receipt file containing all order details and costs.
 
+
+
+MenuItem (Interface)
+
+getName(): String
+
+getPrice(): double
+
+Topping (Abstract Class)
+
+name: String
+
+isExtra: boolean
+
+getName(): String
+
+isExtra(): boolean
+
+getPrice(): double (abstract or implemented based on isExtra)
+
+Meat (Class)
+
+Extends Topping
+
+Meat(name: String, isExtra: boolean)
+
+Cheese (Class)
+
+Extends Topping
+
+Cheese(name: String, isExtra: boolean)
+
+Chips (Class)
+
+type: String
+
+getType(): String
+
+getPrice(): double
+
+Sandwich (Class)
+
+size: int
+
+bread: String
+
+toasted: boolean
+
+meats: List<Meat>
+
+cheeses: List<Cheese>
+
+toppings: List<Topping>
+
+addMeat(meat: Meat)
+
+addCheese(cheese: Cheese)
+
+addTopping(topping: Topping)
+
+getPrice(): double
+
+getName(): String
+
+UserInterface (Class)
+
+scanner: Scanner
+
+start(): void
+
+buildSandwich(): Sandwich
+
+(other UI-related methods)
+
+Program (Class)
+
+main(String[] args): void
+
