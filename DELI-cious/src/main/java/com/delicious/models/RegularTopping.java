@@ -10,9 +10,4 @@ public class RegularTopping extends Topping{
     public double getPrice() {
         return 0.00; // Regular toppings cost nothing
     }
-
-    @Override
-    public String toString() {
-        return name;
-    }
 }

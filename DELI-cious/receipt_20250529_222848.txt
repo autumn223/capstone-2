@@ -1,0 +1,27 @@
+===== DELI-cious Receipt =====
+Date & Time: 2025-05-29 22:28:48
+
+Sandwich:
+8" White (Toasted)
+Meats:
+ - Steak
+ - Chicken
+Cheeses:
+ - American
+Toppings:
+ - Lettuce
+ - Tomato
+ - Onions
+ - Peppers
+Sauces:
+ - Mayo
+ - Mustard
+Total Price: $10.00
+  Meat cost: $2.00
+  Cheese cost: $1.00
+  Total sandwich cost: $10.00
+
+Drink (Medium Lemonade): $2.50
+
+TOTAL: $12.50
+===============================

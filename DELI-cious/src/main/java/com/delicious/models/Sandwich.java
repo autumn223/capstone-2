@@ -24,6 +24,22 @@ public class Sandwich {
         this.toasted = toasted;
     }
 
+    public List<Topping> getMeats() {
+        return meats;
+    }
+
+    public List<Topping> getCheeses() {
+        return cheeses;
+    }
+
+    public List<Topping> getRegulars() {
+        return regulars;
+    }
+
+    public List<String> getSauces() {
+        return sauces;
+    }
+
     public static double getBasePriceBySize(int size) {
         switch (size) {
             case SIZE_4:

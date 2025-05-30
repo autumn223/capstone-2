@@ -4,49 +4,39 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Order {
+    private List<Sandwich> sandwiches = new ArrayList<>();
+    private List<Drink> drinks = new ArrayList<>();
+    private List<Chips> chips = new ArrayList<>();
 
-    private List<Sandwich> sandwiches;
-    private List<Drink> drinks;
-    private List<Chips> chips;
+    public List<Drink> getDrinks() {
+        return drinks;
+    }
 
-    public Order() {
-        sandwiches = new ArrayList<>();
-        drinks = new ArrayList<>();
-        chips = new ArrayList<>();
+    public List<Chips> getChips() {
+        return chips;
     }
 
     public void addSandwich(Sandwich sandwich) {
-        sandwiches.add(0, sandwich);
+        sandwiches.add(sandwich);
+    }
+
+    public void addDrink(Drink drink) {
+        drinks.add(drink);
+    }
+
+    public void addChips(Chips chip) {
+        chips.add(chip);
     }
 
     public List<Sandwich> getSandwiches() {
         return sandwiches;
     }
 
-    public void addDrink(Drink drink) {
-        drinks.add(0, drink);
-    }
-
-    public void addChips(Chips chip) {
-        chips.add(0, chip);
-    }
-
     public double getTotalCost() {
-        double subtotal = 0.0;
-
-        for (Sandwich sandwich : sandwiches) {
-            subtotal += sandwich.getPrice();
-        }
-
-        for (Drink drink : drinks) {
-            subtotal += drink.getPrice();
-        }
-
-        for (Chips chip : chips) {
-            subtotal += chip.getPrice();
-        }
-
-        return subtotal;
+        double total = 0.0;
+        for (Sandwich s : sandwiches) total += s.getPrice();
+        for (Drink d : drinks) total += d.getPrice();
+        for (Chips c : chips) total += c.getPrice();
+        return total;
     }
 }
-

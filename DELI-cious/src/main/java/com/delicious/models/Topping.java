@@ -10,7 +10,11 @@ public abstract class Topping {
     }
 
     public double getPrice() {
-        return 0;
+        // Base price is $1.00, extra adds $0.50
+        return isExtra ? 1.50 : 1.00;
     }
 
+    public String toString() {
+        return name + (isExtra ? " (Extra)" : "");
+    }
 }

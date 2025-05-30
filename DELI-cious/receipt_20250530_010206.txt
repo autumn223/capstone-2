@@ -1,0 +1,30 @@
+===== DELI-cious Receipt =====
+Date & Time: 2025-05-30 01:02
+
+Sandwich:
+4" Wheat (Toasted)
+Meats:
+ - Steak
+ - Chicken (Extra)
+Cheeses:
+ - American
+ - Provolone
+Toppings:
+ - Lettuce
+ - Tomato
+ - Onions
+ - Peppers
+ - Cucumbers
+Sauces:
+ - Mayo
+ - Mustard
+Total Price: $10.00
+  Meat cost: $2.50
+  Cheese cost: $2.00
+  Total sandwich cost: $10.00
+
+Drink (Medium Lemonade): $2.50
+Chips (BBQ): $1.50
+
+TOTAL: $14.00
+===============================
